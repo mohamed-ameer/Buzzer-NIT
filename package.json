@@ -1,0 +1,42 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "Ecommerce application with the mern stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamed-ameer/proshop.git"
+  },
+  "author": "Mohamed amir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohamed-ameer/proshop/issues"
+  },
+  "homepage": "https://github.com/mohamed-ameer/proshop#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.3.3",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.4",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  }
+}
